@@ -1,0 +1,23 @@
+<keymap version="1" name="MyKeyMap" parent="$default">
+  <action id="Coverage">
+    <keyboard-shortcut first-keystroke="ctrl alt q" />
+  </action>
+  <action id="GenerateJavadoc">
+    <keyboard-shortcut first-keystroke="alt g" second-keystroke="alt j" />
+  </action>
+  <action id="NewClass">
+    <keyboard-shortcut first-keystroke="alt n" second-keystroke="alt c" />
+  </action>
+  <action id="NewDir">
+    <keyboard-shortcut first-keystroke="alt n" second-keystroke="alt p" />
+  </action>
+  <action id="Vcs.ShowTabbedFileHistory">
+    <keyboard-shortcut first-keystroke="alt g" second-keystroke="alt h" />
+  </action>
+  <action id="delombokAny">
+    <keyboard-shortcut first-keystroke="alt l" second-keystroke="alt d" />
+  </action>
+  <action id="showBytecodeViewer">
+    <keyboard-shortcut first-keystroke="alt b" second-keystroke="alt c" />
+  </action>
+</keymap>

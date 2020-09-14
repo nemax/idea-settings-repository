@@ -1,0 +1,30 @@
+<templateSet group="MyJava">
+  <template name="cyfauthor" value="/**&#10; *&#10; * $INDEX$&#10; * &#10; * @author  chenyifu cyfingm@163.com&#10; * @date    $DATE$&#10;*/" description="add javadoc style class information" toReformat="false" toShortenFQNames="true">
+    <variable name="INDEX" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="DATE" expression="concat(date(),&quot; &quot;, time())" defaultValue="" alwaysStopAt="false" />
+    <context>
+      <option name="JAVA_CODE" value="true" />
+    </context>
+  </template>
+  <template name="jmain" value="public static void main(String[] args) {&#10;&#9;$classname$ t$classname$ = new $classname$();&#10;&#9;$SELECT$&#10;&#9;return;&#10;}" description="java main method,almost equals to psvm" toReformat="false" toShortenFQNames="true">
+    <variable name="classname" expression="className()" defaultValue="" alwaysStopAt="true" />
+    <variable name="SELECT" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="JAVA_CODE" value="true" />
+    </context>
+  </template>
+  <template name="jbean" value="    &lt;bean id=&quot;$id$&quot; class=&quot;$class_ref$&quot; scope=&quot;singleton&quot;&gt;&#10;        $END$&#10;    &lt;/bean&gt;&#10;" description="generate bean with bean path in clipboard" toReformat="false" toShortenFQNames="true">
+    <variable name="id" expression="decapitalize(groovyScript(&quot;_1.tokenize('.')[-1]&quot;, clipboard()))" defaultValue="" alwaysStopAt="true" />
+    <variable name="class_ref" expression="clipboard()" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="JAVA_CODE" value="true" />
+      <option name="XML_TEXT" value="true" />
+    </context>
+  </template>
+  <template name="jtimertask" value="private class $CLASSNAME$ extends TimerTask {&#10;    @Override&#10;    public void run() {&#10;        try {&#10;            $END$&#10;        } catch (Exception vE) {&#10;            vE.printStackTrace();&#10;            return;&#10;        }&#10;    }&#10;}" description="" toReformat="false" toShortenFQNames="true">
+    <variable name="CLASSNAME" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="JAVA_CODE" value="true" />
+    </context>
+  </template>
+</templateSet>

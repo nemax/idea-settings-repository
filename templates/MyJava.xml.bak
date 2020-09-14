@@ -1,0 +1,9 @@
+<templateSet group="MyJava">
+  <template name="jdauthor" value="/**&#10; *&#10; * $INDEX$&#10; * &#10; * @author  chenyifu cyfingm@163.com&#10; * @date    $DATE$&#10;*/" description="添加作者信息，JavaDoc风格" toReformat="false" toShortenFQNames="true">
+    <variable name="INDEX" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="DATE" expression="concat(date(),&quot; &quot;, time())" defaultValue="" alwaysStopAt="false" />
+    <context>
+      <option name="JAVA_CODE" value="true" />
+    </context>
+  </template>
+</templateSet>
